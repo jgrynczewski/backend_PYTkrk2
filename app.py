@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
@@ -22,3 +22,8 @@ def hello(name):
 @app.route("/test")
 def test():
     return "<html><head></head><body><h2>Hello, world!</h2></body></html>"
+
+@app.route("/hello2")
+def hello2():
+    return render_template("index.html")
+ 
