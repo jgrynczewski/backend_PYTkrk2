@@ -26,4 +26,3 @@ def test():
 @app.route("/hello2")
 def hello2():
     return render_template("index.html")
- 
