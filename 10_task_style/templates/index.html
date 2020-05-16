@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Zadania</title>
+</head>
+<body>
+    <form method="POST">
+        <input type="text" name="task" placeholder="Wpisz zadanie">
+        <input type="submit" value="Dodaj">
+    </form>
+    <ul>
+    {% for task in tasks %}
+        <li>{{ task }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
