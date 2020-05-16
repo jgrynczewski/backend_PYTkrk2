@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:align="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Zadania</title>
+</head>
+<body>
+    <form method="POST">
+        <div class="form-group">
+            <input type="text" style="margin-top: 10px" class="form-control" name="task" placeholder="Wpisz zadanie">
+        </div>
+        <div class="form-group">
+            <input type="submit" style="margin-left: 20px" class="btn btn-primary" value="Dodaj">
+        </div>
+    </form>
+    <ul class="list-group">
+    {% for task in tasks %}
+        <li class="list-group-item">{{ task }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
