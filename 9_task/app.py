@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 tasks = []
 
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     if request.method == "POST":
