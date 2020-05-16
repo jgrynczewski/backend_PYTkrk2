@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Przelicznik walut</title>
+</head>
+<body>
+
+    <form action="{{ url_for('convert') }}" method="POST">
+        <input type="text" name="base" placeholder="Baza">
+        <input type="symbol" name="symbol" placeholder="Waluta">
+        <input type="submit" value="Przelicz">
+    </form>
+
+</body>
+</html>
