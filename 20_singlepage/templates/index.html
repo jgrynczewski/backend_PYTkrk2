@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strona</title>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            load_page('first');
+
+            document.querySelectorAll('.nav-link').forEach( link => {
+                link.onclick = () => {
+                    load_page(link.dataset.page);
+                    return false;
+                };
+            });
+        });
+
+        function load_page(name) {
+            const request = new XMLHttpRequest();
+            request.open('GET', `/${name}`);
+            request.onload = () => {
+                document.title = name;
+                const response = request.responseText;
+                document.querySelector('#body').innerHTML = response;
+
+                history.pushState(null, name, name)
+            }
+            request.send();
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <ul>
+        <li><a href="" class="nav-link" data-page="first">Pierwsza strona</a></li>
+        <li><a href="" class="nav-link" data-page="second">Druga strona</a></li>
+        <li><a href="" class="nav-link" data-page="third">Trzecia strona</a></li>
+    </ul>
+
+    <div id="body"></div>
+
+</body>
+</html>
