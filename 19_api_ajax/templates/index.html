@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+    <meta charset="UTF-8">
+    <title>Przelicznik walut</title>
+</head>
+<body>
+    <form id="form">
+        <input type="number" id="amount" name="amount" placeholder="Wpisz kwotę">
+        <input type="text" id="base" name="base" placeholder="Wpłacana waluta">
+        <input type="text" id="currency" name="currency" placeholder="Wypłacana waluta">
+        <input type="submit" value="Przelicz">
+    </form>
+    <div id="result"></div>
+</body>
+</html>

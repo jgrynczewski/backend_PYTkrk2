@@ -30,7 +30,7 @@ def index():
     if rates:
         converter = rates.get(currency)
         return jsonify({
-            "sucess": True,
+            "success": True,
             "result": round(float(amount) * converter, 2),
             "currency": currency
         })
