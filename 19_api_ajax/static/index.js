@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const base = document.querySelector('#base').value
         const currency = document.querySelector('#currency').value
 
-        request.open('POST', '/convert');
+        request.open('POST', '/');
 
         request.onload = () => {
-
+            console.log(request.responseText);
             const data = JSON.parse(request.responseText);
 
             if (data.success) {
