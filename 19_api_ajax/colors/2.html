@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kolory</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            document.querySelectorAll('.change-color').forEach( function(button) {
+                button.onclick = function() {
+                document.querySelector('h1').style.color = button.dataset.color;
+            }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Witaj!</h1>
+    <button class="change-color" data-color="red">Czerwony</button>
+    <button class="change-color" data-color="black">Czarny</button>
+    <button class="change-color" data-color="blue">Niebieski</button>
+</body>
+</html>
