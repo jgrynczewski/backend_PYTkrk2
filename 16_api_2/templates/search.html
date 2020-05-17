@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Książki</title>
+</head>
+<body>
+    {% for title in content['titles'] %}
+        <br>
+        {{ title }}
+    {% endfor %}
+
+    {% for url in content['image_urls'] %}
+    <p>
+        <img src="{{ url }}">
+    </p>
+    {% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Książki</title>
+</head>
+<body>
+    <form action="{{ url_for('search') }}" method="post">
+        <input type="text" name="q">
+        <input type="submit" value="Wyszukaj">
+    </form>
+</body>
+</html>
