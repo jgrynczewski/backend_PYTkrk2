@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kolory</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            document.querySelector('#red').onclick = function() {
+                document.querySelector('h1').style.color = 'red';
+            }
+
+            document.querySelector('#black').onclick = function() {
+                document.querySelector('h1').style.color = 'black';
+            }
+
+            document.querySelector('#blue').onclick = function() {
+                document.querySelector('h1').style.color = 'blue';
+            }
+        });
+    </script>
+</head>
+<body>
+    <h1>Witaj!</h1>
+    <button id="red">Czerwony</button>
+    <button id="black">Czarny</button>
+    <button id="blue">Niebieski</button>
+</body>
+</html>
